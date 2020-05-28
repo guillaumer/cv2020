@@ -1,6 +1,7 @@
 import React from "react"
 
 import {Helmet} from "react-helmet"
+import { withPrefix } from "gatsby"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -14,6 +15,7 @@ function Home() {
                 <title>Guillaume Raoult - Développeur web</title>
                 <meta name="description" content="Guillaume Raoult, développeur web à Toulouse"/>
                 <meta name="theme-color" content="#008f68"/>
+                <script src={withPrefix('script.js')} type="text/javascript" />
             </Helmet>
             <Container fluid>
                 <Row noGutters>
@@ -24,7 +26,7 @@ function Home() {
                                 <h2>Développeur web</h2>
                                 <p>En construction<span className="ellipsis"></span>
                                 </p>
-                                <Button variant="outline-dark" href="https://cv.ergeais.com">Version 2014</Button>
+                                <Button variant="outline-dark" href="https://cv.ergeais.com">Ancienne version</Button>
                             </Col>
                             <Col xs={12} className="align-items-center mt-auto footer">
                                 <p>
