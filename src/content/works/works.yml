@@ -1,0 +1,36 @@
+- title: YAMAtune
+  image: ../../images/works/yamatune.jpg
+  desc: Acualités et vente en ligne de vêtements spécialisés au Japon
+  tech: EC-Cube 3 (Symfony)
+- title: Moi Je lis
+  image: ../../images/works/moijelis.jpg
+  desc: Site destiné à la vente d'ouvrages scolaires basé sur Wordpress WooCommerce.
+  tech: WooCommerce
+- title: Occasions Mazda
+  image: ../../images/works/mazda.jpg
+  desc: Portail des concessionnaires Mazda de France.
+  tech: Icanboogie
+- title: MCA
+  image: ../../images/works/mca.jpg
+  desc: Sites immobilier basés sur Wordpress Multisite
+  tech: Wordpress
+- title: OldNick
+  image: ../../images/works/oldnick.jpg
+  desc: Développement des jeux concours pour Old Nick, Go et Spiced.
+  tech: Silex (Symfony)
+- title: Minisites Sedrap
+  image: ../../images/works/minisites_sedrap.jpg
+  desc: Développement d'un réseau de minisites dédiés à des collections d'ouvrages scolaires.
+  tech: Wordpress
+- title: Suravenir
+  image: ../../images/works/suravenir.jpg
+  desc: Développement et intégration du site principal de Suravenir, filiale de la banque Crédit Mutuel.
+  tech: Wordpress
+- title: Sedrap
+  image: ../../images/works/sedrap.jpg
+  desc: Développement de fonctionnalités et maintenance sur un site e-commerce de vente d'ouvrages scolaires.
+  tech: Adequation
+- title: MPFM
+  image: ../../images/works/mpfm.jpg
+  desc: Nouveau portail d'information du CarifOref Midi-Pyrénées à destination du grand public.
+  tech: Isens Evolution

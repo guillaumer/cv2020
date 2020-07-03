@@ -1,46 +1,35 @@
 import React from "react"
 
-import {Helmet} from "react-helmet"
-import { withPrefix } from "gatsby"
+import {Helmet} from "react-helmet";
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import Layout from "../components/site/layout";
+import Section from "../components/site/section";
+import Sections from "../components/sections";
+import useSiteMetadata from "../hooks/use-site-metadata";
 
-function Home() {
-    return (
-        <div>
-            <Helmet>
-                <title>Guillaume Raoult - Développeur web</title>
-                <meta name="description" content="Guillaume Raoult, développeur web à Toulouse"/>
-                <meta name="theme-color" content="#008f68"/>
-                <script src={withPrefix('script.js')} type="text/javascript" />
-            </Helmet>
-            <Container fluid>
-                <Row noGutters>
-                    <Col>
-                        <Row className="background_cont">
-                            <Col xs={12} className="align-items-center mt-auto">
-                                <h1>GUILLAUME RAOULT</h1>
-                                <h2>Développeur web</h2>
-                                <p>En construction<span className="ellipsis"></span>
-                                </p>
-                                <Button variant="outline-dark" href="https://cv.ergeais.com">Ancienne version</Button>
-                            </Col>
-                            <Col xs={12} className="align-items-center mt-auto footer">
-                                <p>
-                                    Fait avec <span>♥</span> et <a href="https://www.gatsbyjs.org/"
-                                                                   target="_blank" rel="noreferrer">GatsbyJS</a> à
-                                    Toulouse
-                                </p>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    )
+const Index = ({location}) => {
+	const {title} = useSiteMetadata();
+	
+	const sections = Sections.map(section => {
+		return (
+			 
+			 <Section key={section.classe} title={section.title} classe={section.classe}>
+				 {section.children}
+			 </Section>
+		)
+	})
+	
+	return (
+		 <div>
+			 <Helmet>
+				 <title>{title}</title>
+			 </Helmet>
+			 <Layout location={location}>
+				 {sections}
+			 </Layout>
+		 </div>
+	)
 }
 
-export default Home
+export default Index
+

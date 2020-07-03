@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300&display=swap.css');
+
+@umidori: #7bbfd4;
+
+html, body {
+	height: 100%
+}
+
+body {
+	font-size: 16px;
+	background-color: #dadada;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	h1 {
+		font-family: 'Anton', sans-serif;
+		font-size: 3em;
+	}
+	.form-control {
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba(75, 218, 159, .25);
+			border-color: @umidori;
+		}
+	}
+	.btn {
+		&.btn-outline-primary:not(:disabled):not(.disabled) {
+			color: @umidori;
+			border-color: @umidori;
+			&:hover, &:active {
+				color: #fff;
+				background-color: @umidori;
+				border-color: #62a0b3;
+			}
+		}
+	}
+	.sidebar {
+		background: @umidori;
+		color: #fff;
+		height: 100%;
+		width: 25%;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
+		padding: 30px 0 0 0;
+		@media only screen and (max-width: 1024px) {
+			position: relative !important;
+			width: 100%;
+			height: auto;
+		}
+		h1 {
+			margin-top: 30px;
+			font-size: 2em;
+			a {
+				color: #fff;
+			}
+		}
+		.portrait {
+			border: solid 2px #fff;
+		}
+		.title {
+			margin-bottom: 30px;
+		}
+		.nav {
+			a {
+				padding: 0.7rem 0;
+				color: #fff;
+				position: relative;
+				border-bottom: solid 1px #41d095;
+				&.active, &:hover {
+					color: @umidori;
+					text-decoration: none;
+					&:after {
+						width: 100%;
+						transition: width 0.1s;
+					}
+				}
+				@media only screen and (max-width: 1024px) {
+					&:hover {
+						color: #fff;
+						&:after {
+							width: 0;
+						}
+					}
+				}
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 0;
+					height: 100%;
+					background: #fff;
+					right: 0;
+					top: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}
+	h2 {
+		font-family: 'Anton', sans-serif;
+		color: @umidori;
+		font-size: 3em;
+		font-weight: 300;
+		margin-bottom: 50px;
+	}
+	p {
+		color: #5e5e5e;
+	}
+	h3 {
+		color: #5e5e5e;
+		font-size: 2em;
+		margin-bottom: 30px;
+	}
+	section:not(.sidebar) {
+		padding: 30px 0;
+		background: #fff;
+		margin-bottom: 10px;
+		width: 100%;
+		border: solid 1px #ccc;
+		border-width: 1px 0;
+		&.work {
+			.masonry {
+				display: flex;
+				flex-flow: row wrap;
+				width: 100%;
+			}
+			.masonry-brick {
+				flex: auto;
+				height: 250px;
+				min-width: 150px;
+				margin: 0 4px 8px 4px;
+				border: solid 1px #b7b7b7;
+				position: relative;
+				overflow: hidden;
+				&:nth-child(4n+1) {
+					width: 250px;
+					&:nth-child(4n+2) {
+						width: 325px;
+					}
+					&:nth-child(4n+3) {
+						width: 188px;
+					}
+					&:nth-child(4n+4) {
+						width: 380px;
+					}
+				}
+				&:hover {
+					.card {
+						opacity: 0.95;
+						transition: opacity 0.5s;
+					}
+				}
+				.card {
+					opacity: 0;
+					position: absolute;
+					height: 100%;
+					background: black;
+					color: #fff;
+					width: 100%;
+					z-index: 1;
+					text-align: center;
+					border: none;
+					font-size: 12px;
+					p {
+						color: #fff;
+					}
+					.card-footer {
+						background: #000000;
+						border-top: solid 1px #1d1d1d;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		text-align: center;
+		font-size: 0.7rem;
+		font-style: italic;
+		span.coffee {
+			color: saddlebrown;
+			display: inline !important;
+			font-size: 1.5em;
+		}
+	}
+}
+
+
+
+
+
+
+
+

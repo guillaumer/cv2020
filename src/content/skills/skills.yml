@@ -1,0 +1,16 @@
+- image: ../../images/skills/symfony.png
+  title: Symfony
+- image: ../../images/skills/php.png
+  title: PHP
+- image: ../../images/skills/javascript.png
+  title: JavaScript
+- image: ../../images/skills/wordpress.png
+  title: Wordpress
+- image: ../../images/skills/html5.png
+  title: HTML5
+- image: ../../images/skills/css3.png
+  title: CSS3
+- image: ../../images/skills/jquery.png
+  title: jQuery
+- image: ../../images/skills/photoshop.png
+  title: Photoshop
